@@ -7,7 +7,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #efe7e0;
-  background-image: url('wood-bg.jpg'); /* Default: index.html */
+  background-image: url('wood-bg.jpg'); /* Default for index.html */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -29,7 +29,6 @@ header {
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-/* Default header image (index or others) */
 header img {
   max-width: 100%;
   height: auto;
@@ -42,37 +41,43 @@ body.hardwoods header img {
   content: url('tree-rings.jpg');
 }
 
-/* ========== NAVIGATION ========== */
+/* ========== STICKY NAVIGATION ========== */
 #nav {
-  background-color: rgba(255, 255, 255, 0.85);
-  padding: 25px;
-  border-radius: 15px;
-  width: 300px;
-  margin: 40px auto 20px auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 20px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-bottom: 2px solid #d9c7b2;
 }
 
 #nav ul {
-  list-style-type: none;
-  padding: 0;
+  list-style: none;
   margin: 0;
-  text-align: center;
+  padding: 0;
+  display: inline-flex;
+  gap: 30px;
 }
 
 #nav li {
-  margin: 15px 0;
+  margin: 0;
 }
 
 #nav a {
   text-decoration: none;
   color: #2c1b10;
   font-weight: 700;
-  font-size: 1.1em;
-  transition: color 0.2s ease-in-out;
+  font-size: 1.05em;
+  padding: 6px 12px;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 #nav a:hover {
   color: #8d623d;
+  background-color: rgba(200, 170, 140, 0.15);
+  border-radius: 6px;
 }
 
 /* ========== MAIN CONTENT AREA ========== */
@@ -82,6 +87,7 @@ body.hardwoods header img {
   margin: 20px auto 80px auto;
   font-size: 1.05em;
   line-height: 1.6em;
+  padding-top: 20px; /* Prevent content from being hidden under sticky nav */
 }
 
 /* ========== SECTION BLOCKS ========== */
@@ -102,4 +108,3 @@ body.hardwoods header img {
   border-radius: 8px;
   text-align: left;
 }
-
