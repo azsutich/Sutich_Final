@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
-/* ========== GLOBAL RESET & DEFAULTS ========== */
+/* ========== GLOBAL BASE STYLES ========== */
 body {
   font-family: 'Raleway', sans-serif;
   color: #2c1b10;
   margin: 0;
   padding: 0;
   background-color: #efe7e0;
-  background-image: url('wood-bg.jpg'); /* default for index */
+  background-image: url('wood-bg.jpg'); /* Default: index.html */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
 }
 
-/* ========== HARDWOODS PAGE BACKGROUND ========== */
+/* Override background for hardwoods page */
 body.hardwoods {
   background-image: url('tools.jpg');
 }
@@ -29,6 +29,7 @@ header {
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
+/* Default header image (index or others) */
 header img {
   max-width: 100%;
   height: auto;
@@ -36,7 +37,12 @@ header img {
   margin-bottom: 20px;
 }
 
-/* ========== NAVIGATION STYLING ========== */
+/* Override header image on hardwoods page */
+body.hardwoods header img {
+  content: url('tree-rings.jpg');
+}
+
+/* ========== NAVIGATION ========== */
 #nav {
   background-color: rgba(255, 255, 255, 0.85);
   padding: 25px;
@@ -69,15 +75,31 @@ header img {
   color: #8d623d;
 }
 
-/* ========== CONTENT STYLING ========== */
+/* ========== MAIN CONTENT AREA ========== */
 #content {
   text-align: center;
-  max-width: 800px;
+  max-width: 950px;
   margin: 20px auto 80px auto;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   font-size: 1.05em;
   line-height: 1.6em;
 }
+
+/* ========== SECTION BLOCKS ========== */
+.section {
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== SPECIES BOXES ========== */
+.species {
+  background-color: rgba(250, 250, 250, 0.95);
+  border-left: 5px solid #c2a271;
+  padding: 15px 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  text-align: left;
+}
+
