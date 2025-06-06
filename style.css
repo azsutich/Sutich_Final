@@ -126,7 +126,7 @@ footer {
 }
 
 #fun-icon {
-  width: 60px;
+  font-size: 3rem;
   animation: bounce 2s infinite ease-in-out;
 }
 
